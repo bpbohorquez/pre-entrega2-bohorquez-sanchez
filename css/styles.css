@@ -1,0 +1,392 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos globales body */
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: rgb(254, 247, 234);
+    background: linear-gradient(90deg, rgba(254, 247, 234, 1) 0%, rgba(254, 247, 234, 1) 68%, rgba(255, 235, 205, 1) 100%);
+}
+
+
+/***** Estilos Mobile: *****/
+
+/* Estilos Home */
+
+/* Estilos encabezado */
+header {
+    background-color: rgb(255, 205, 0);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+}   
+
+header .header-logo img {
+    width: 5rem;    
+
+}
+
+
+/* Estilos menú de navegación */
+.menu {
+    display: none;
+}
+
+.menu-desplegable ul {
+    background-color: rgba(255, 204, 0, 0.92);
+    border: solid 0.5px rgba(0, 0, 0, 0.514);
+    font-weight: 500;
+}
+
+.menu-desplegable .boton-menu {
+    background-color: rgb(255, 205, 0);
+    border: solid 1.5px black;
+    color: black;
+    font-weight: 500;
+}
+
+.menu-desplegable .boton-menu:hover {
+    background-color: black;
+    border:solid 1.5px rgb(255, 205, 0);
+    color: rgb(255, 205, 0);
+    transition: 0.2s;
+}
+
+/* Estilos titulo*/
+.titulo {
+    text-align: center;
+    margin: 1rem;
+}
+
+.titulo span {
+    display: block;
+}
+
+/* Estilos sección información */
+.informacion {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.informacion-titulo {
+    padding: 1rem;
+}
+
+.informacion-parrafo {
+    padding: 0 1.5rem;
+    text-align: justify;
+}
+
+.informacion-imagen {
+    display: flex;
+    justify-content: center;
+    margin: 1rem;
+}
+
+.informacion-imagen img {
+    width: 80%;
+}
+
+/* Estilos sección videos */
+.videos {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+    row-gap: 0.5rem;
+    justify-items: center;
+    margin: 1rem;
+
+}
+
+.videos iframe {
+    width: 80%;
+
+}
+
+/* Estilos footer */
+footer {
+    background-color: rgb(255, 205, 0);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+.derechos {
+    font-weight: 400;
+    font-size: small;
+}
+
+
+
+/* Estilos Tienda */
+.productos {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    justify-items: center;
+    row-gap: 1rem;
+    margin-bottom: 2rem;
+    
+}
+
+.productos .item-tienda {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    width: 100%;
+    
+}
+
+.productos .item-tienda img {
+    width: 60%;
+}
+
+.productos .item-tienda h2 {
+    font-weight: 500;
+    font-size: large;
+}
+
+
+
+/* Estilos Roster */
+.jugadores {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+    margin: 40px 0;
+}
+
+.jugadores img {
+    width: 65%;
+}
+
+
+
+/* Estilos galería */
+.fotos {
+    margin: 2rem 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: center;
+
+}
+
+.fotos img {
+    width: 75%
+}
+
+
+
+/* Estilos Contacto */
+.main-contacto {
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.formulario {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.formulario__input {
+    font-weight: 500;
+    text-align: center;
+    margin: 5px;
+}
+
+
+/***** Estilos Tablet: *****/
+@media screen and (min-width:600px) {
+    
+    /* Estilos Home */
+    header {
+        justify-content: space-between;
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+
+    .informacion-imagen img {
+        width: 60%;
+    }
+
+    .informacion-parrafo {
+        padding: 0 3.5rem;
+    }
+
+    .videos iframe {
+        width: 60%;
+    }
+
+    .footer-iconos a img:hover {
+        transform: scale(1.1);
+        transition: 0.5s;
+    }
+
+
+    /* Estilos Tienda */
+    .productos {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .productos .item-tienda img {
+        width: 80%;
+    }
+
+    .productos .item-tienda img:hover {
+        transform: scale(1.04);
+        transition: 0.3s;
+    }
+
+
+    /* Estilos Galería */
+    .fotos img {
+        width: 45%
+    }
+
+    .fotos img:hover {
+        transform: scale(1.15);
+        transition: 0.3s;
+    }
+
+
+    /* Estilos Roster */
+    .jugadores img {
+        width: 45%;
+    }
+
+    .jugadores img:hover {
+        transform: scale(1.1);
+        transition: 0.3s;
+    }
+}
+
+
+/***** Estilos Desktop: *****/
+@media screen and (min-width:1024px) {
+    
+    /* Estilos menú desplegable */
+    .menu-desplegable {
+        display: none;
+    }
+
+    .menu {
+        display: block;
+        
+    }
+
+    .menu ul {
+        display: flex;
+        gap: 1rem;
+        padding: 0;
+        margin: 0;
+    }
+    
+    .menu ul li {
+        list-style: none;
+        font-weight: 600;
+        font-size: 1rem;
+    }
+    
+    .menu ul li:hover {
+        transform: scale(1.1);
+        transition: 0.3s;
+    }
+
+    .menu ul li a {
+        text-decoration: none;
+        color: inherit;
+    }
+
+    /* Estilos Home */
+    .titulo {
+        margin: 2rem;
+    }
+
+    .titulo span {
+        display: inline;
+    }
+
+    .informacion {
+        display: grid;
+        grid-template-areas:
+            "titulo none"
+            "parrafo imagen";
+
+        grid-template-columns: 60% 40%;
+        justify-items: center;
+        align-items: center;
+    }
+
+    .informacion-titulo {
+        grid-area: titulo;
+    }
+
+    .informacion-parrafo {
+        grid-area: parrafo;
+        margin: 0;
+        padding-right: 0;
+    }
+
+    .informacion-imagen {
+        grid-area: imagen;
+        margin: 0;
+    }
+
+    .informacion-imagen img {
+        width: 80%;
+    }
+
+    .videos {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        justify-content: center;
+        margin: 2rem;
+    }
+
+    .videos iframe {
+        width: 40%;
+    }
+
+
+
+    /* Estilos Tienda */
+    .productos {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .productos .item-tienda img {
+        width: 80%;
+    }
+
+
+
+    /* Estilos Galería */
+    .fotos img {
+        width: 30%
+    }
+
+
+    /* Estilos Roster */
+    .jugadores img {
+        width: 30%;
+    }
+
+}
